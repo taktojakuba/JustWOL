@@ -6,8 +6,8 @@ services:
     networks: [wol]
   sender:
     build: .
-    volumes: ["./hosts.conf:/hosts.conf:ro"]
-    command: 
+    volumes: ["./wol.sh:/wol.sh:ro"]
+    command: bash /wol.sh AA:BB:CC:DD:EE:FF 172.28.0.255 9
     networks: [wol]
     profiles: [manual]
 
