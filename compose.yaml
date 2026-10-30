@@ -7,7 +7,7 @@ services:
   sender:
     build: .
     volumes: ["./wol.sh:/wol.sh:ro"]
-    command: bash /wol.sh AA:BB:CC:DD:EE:FF 172.28.0.255 9
+    command: bash /wol.sh AA:BB:CC:DD:EE:FF listener 9
     networks: [wol]
     profiles: [manual]
 
